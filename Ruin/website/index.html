@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ruin — Visual-First Programming Language</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #0f0f0f 0%, #1a1a1a 100%);
+            color: #e0e0e0;
+            line-height: 1.6;
+        }
+        header {
+            background: #0a0a0a;
+            border-bottom: 3px solid #11bd00;
+            padding: 2rem 0;
+            text-align: center;
+        }
+        header h1 {
+            font-size: 3.5rem;
+            color: #e7eb00;
+            text-shadow: 0 0 20px rgba(231, 235, 0, 0.5);
+        }
+        header p {
+            font-size: 1.3rem;
+            color: #11bd00;
+            margin-top: 0.5rem;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 1.5rem;
+        }
+        nav a {
+            color: #e7eb00;
+            text-decoration: none;
+            font-weight: 600;
+            padding: 0.5rem 1rem;
+            border: 2px solid #e7eb00;
+            border-radius: 8px;
+            transition: all 0.3s;
+        }
+        nav a:hover {
+            background: #e7eb00;
+            color: #0a0a0a;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+        }
+        section {
+            margin-bottom: 4rem;
+        }
+        h2 {
+            font-size: 2.5rem;
+            color: #11bd00;
+            margin-bottom: 1.5rem;
+            border-bottom: 2px solid #e7eb00;
+            padding-bottom: 0.5rem;
+        }
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        .feature-card {
+            background: #1a1a1a;
+            padding: 2rem;
+            border-radius: 12px;
+            border: 2px solid #11bd00;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(17, 189, 0, 0.3);
+        }
+        .feature-card h3 {
+            color: #e7eb00;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+        .code-example {
+            background: #0a0a0a;
+            padding: 1.5rem;
+            border-radius: 8px;
+            border-left: 4px solid #b70000;
+            overflow-x: auto;
+            margin: 1.5rem 0;
+        }
+        .code-example pre {
+            color: #e0e0e0;
+            font-family: 'Courier New', monospace;
+            font-size: 0.95rem;
+        }
+        .code-example .command { color: #11bd00; }
+        .code-example .punctuation { color: #e7eb00; }
+        .code-example .number { color: #3121ff; }
+        .code-example .terminator { color: #b70000; }
+        .install-box {
+            background: #1a1a1a;
+            padding: 2rem;
+            border-radius: 12px;
+            border: 2px solid #e7eb00;
+            margin: 2rem 0;
+        }
+        .install-box code {
+            background: #0a0a0a;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            display: block;
+            margin: 1rem 0;
+            color: #11bd00;
+            font-family: 'Courier New', monospace;
+        }
+        footer {
+            background: #0a0a0a;
+            text-align: center;
+            padding: 2rem;
+            border-top: 3px solid #11bd00;
+            margin-top: 4rem;
+        }
+        footer p {
+            color: #888;
+        }
+        .logo {
+            width: 120px;
+            height: 120px;
+            margin: 0 auto 1rem;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="../images/ruin_logo.png" alt="Ruin Logo" class="logo">
+        <h1>Ruin</h1>
+        <p>Visual-First Programming Language for Games, Websites & Everything</p>
+        <nav>
+            <a href="#features">Features</a>
+            <a href="#syntax">Syntax</a>
+            <a href="#install">Install</a>
+            <a href="#docs">Docs</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <section id="about">
+            <h2>What is Ruin?</h2>
+            <p>Ruin is a structured, visual-first programming language designed for clarity and unambiguous execution. Every command, property, and value is explicitly categorized — no implicit behavior, no hidden surprises. Whether you're building games, websites, or complex systems, Ruin's clean syntax makes your code readable and maintainable.</p>
+        </section>
+
+        <section id="features">
+            <h2>Core Features</h2>
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <h3>🎯 Explicit by Design</h3>
+                    <p>No ambiguous properties or implicit conversions. Every value and category is clearly specified using property categories and separators.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>📐 Visual Structure</h3>
+                    <p>Nesting with parentheses, indentation with dots, and clear command terminators (#) make code structure mirror execution flow.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>⚡ Simple Syntax</h3>
+                    <p>Commands end with <span style="color: #b70000;">#</span>, properties start with <span style="color: #e7eb00;">.</span>, and values are separated by <span style="color: #e7eb00;">,</span> — that's it.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>🔧 Powerful Operators</h3>
+                    <p>Math constants (e, Tau, Pi, i), percentage values, modulo, and standard operators with clear precedence.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>🎮 Built for Games</h3>
+                    <p>Control input, manipulate vectors, set entity properties — all with readable, structured commands like Control(), Vec(), and Goto().</p>
+                </div>
+                <div class="feature-card">
+                    <h3>🌐 Universal</h3>
+                    <p>From game engines to web backends, Ruin adapts to any domain with custom commands and property types.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="syntax">
+            <h2>Syntax at a Glance</h2>
+            <p>Here's what Ruin code looks like:</p>
+            <div class="code-example">
+                <pre><span class="command">Val</span>(<span class="punctuation">
+   .Input:</span> <span class="number">1</span><span class="punctuation">
+   .output:</span> <span class="command">Val</span>(<span class="punctuation">
+      .type:</span> x;vec/player<span class="punctuation"> ,Value:</span> x + <span class="number">10</span>)
+)<span class="terminator">#</span>
+
+<span class="command">Control</span>(<span class="punctuation">
+   .Input:</span> W<span class="punctuation">
+   .Action:</span> <span class="command">Move</span>(<span class="punctuation">
+      .Type:</span> x;Vec/player<span class="punctuation"> ,Value:</span> x + <span class="number">5</span>
+   )
+)<span class="terminator">#</span></pre>
+            </div>
+            <p><strong>Key Rules:</strong></p>
+            <ul style="margin-left: 2rem; margin-top: 1rem;">
+                <li>Commands are capitalized: <span style="color: #11bd00;">Val()</span>, <span style="color: #11bd00;">Control()</span>, <span style="color: #11bd00;">Custom()</span></li>
+                <li>Every command ends with <span style="color: #b70000;">#</span></li>
+                <li><span style="color: #e7eb00;">.</span> enters a property level, <span style="color: #e7eb00;">,</span> continues at the same level</li>
+                <li>Property categories explicit: <code>Type: x;Vec/player</code> (property;category/target)</li>
+                <li>Custom commands: define with <code>Custom(.Name: Foo ...)</code>, call with <code>'Foo(...)</code></li>
+            </ul>
+        </section>
+
+        <section id="install">
+            <h2>Get Started</h2>
+            <div class="install-box">
+                <h3>Install the VS Code Extension</h3>
+                <p>Get syntax highlighting, file icons, and language support for Ruin in Visual Studio Code:</p>
+                <code>code --install-extension ruin-language-0.0.3.vsix</code>
+                <p style="margin-top: 1rem;">Or search for <strong>"Ruin Language"</strong> in the VS Code Marketplace (coming soon).</p>
+            </div>
+            <div class="install-box">
+                <h3>Write Your First Ruin Program</h3>
+                <p>Create a <code>hello.ruin</code> file and start coding:</p>
+                <div class="code-example">
+                    <pre><span class="command">Val</span>(<span class="punctuation">.Type:</span> text//console_print<span class="punctuation"> ,Value:</span> "Hello, Ruin!")<span class="terminator">#</span></pre>
+                </div>
+            </div>
+        </section>
+
+        <section id="docs">
+            <h2>Documentation</h2>
+            <p>Learn Ruin from the ground up:</p>
+            <ul style="margin-left: 2rem; margin-top: 1rem;">
+                <li><strong>Language Spec:</strong> Full syntax reference with examples</li>
+                <li><strong>Command Reference:</strong> Built-in commands (Val, Vec, Control, Custom, etc.)</li>
+                <li><strong>Property Categories:</strong> Value, Vec, Size, Entity, Text</li>
+                <li><strong>Operators & Math:</strong> Arithmetic, logic, and constants</li>
+                <li><strong>Custom Commands:</strong> Extend Ruin with your own functions</li>
+            </ul>
+            <p style="margin-top: 1.5rem;"><em>Full documentation coming soon. Follow development on GitHub!</em></p>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Ruin.tech — Built with clarity, designed for everyone.</p>
+        <p style="margin-top: 0.5rem;">Publisher: P4xelB0x3Z</p>
+    </footer>
+</body>
+</html>

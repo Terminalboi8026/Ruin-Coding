@@ -1,0 +1,11 @@
+Val(
+    .Input: 1
+       .output: Val(
+          .type: x;vec//box ,Value: x + 10)
+)#
+
+Control(
+    .Input: W
+       .Action: _DoSomething(...
+       )#
+)#

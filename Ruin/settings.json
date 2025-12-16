@@ -1,0 +1,42 @@
+{
+  "files.associations": {
+    "*.ruin": "ruin"
+  },
+  "editor.tokenColorCustomizations": {
+    "textMateRules": [
+      {
+        "scope": [
+          "source.ruin entity.name.function",
+          "entity.name.function",
+          "entity.name.function.ruin"
+        ],
+        "settings": { "foreground": "#e7eb00" }
+      },
+      {
+        "scope": [
+          "source.ruin constant.numeric",
+          "constant.numeric",
+          "constant.language"
+        ],
+        "settings": { "foreground": "#3121ff" }
+      },
+      {
+        "scope": [
+          "source.ruin punctuation.access.property.ruin",
+          "punctuation.access.property.ruin",
+          "source.ruin punctuation.separator.list.ruin",
+          "punctuation.separator.list.ruin"
+        ],
+        "settings": { "foreground": "#e7eb00" }
+      },
+      {
+        "scope": [
+          "source.ruin punctuation.terminator.command.ruin",
+          "punctuation.terminator.command.ruin",
+          "punctuation.terminator.command"
+        ],
+        "settings": { "foreground": "#e7eb00" }
+      }
+    ]
+  }
+}

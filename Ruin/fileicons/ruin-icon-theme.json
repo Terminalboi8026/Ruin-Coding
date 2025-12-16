@@ -1,0 +1,18 @@
+{
+  "iconDefinitions": {
+    "_file": {
+      "iconPath": "../images/ruin_logo.png"
+    },
+    "_folder": {
+      "iconPath": "../images/ruin_logo.png"
+    },
+    "ruin-file": {
+      "iconPath": "../images/ruin_logo.png"
+    }
+  },
+  "fileExtensions": {
+    "ruin": "ruin-file"
+  },
+  "file": "_file",
+  "folder": "_folder"
+}

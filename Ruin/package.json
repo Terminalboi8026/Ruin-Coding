@@ -1,0 +1,40 @@
+{
+  "name": "ruin-language",
+  "displayName": "Ruin Language",
+  "description": "Easy to use scripting language for everything, from games to websites.",
+  "version": "0.0.3",
+  "publisher": "P4xelB0x3Z",
+  "main": "./extension.js",
+  "icon": "images/ruin_logo.png",
+  "engines": {
+    "vscode": "^1.70.0"
+  },
+  "contributes": {
+    "languages": [
+      {
+        "id": "ruin",
+        "aliases": ["Ruin"],
+        "extensions": [".ruin"],
+        "configuration": "./language-configuration.json",
+        "icon": {
+          "light": "./images/ruin_logo.png",
+          "dark": "./images/ruin_logo.png"
+        }
+      }
+    ],
+    "grammars": [
+      {
+        "language": "ruin",
+        "scopeName": "source.ruin",
+        "path": "./ruin.tmLanguage.json"
+      }
+    ],
+    "iconThemes": [
+      {
+        "id": "ruin-icons",
+        "label": "Ruin File Icons",
+        "path": "./fileicons/ruin-icon-theme.json"
+      }
+    ]
+  }
+}

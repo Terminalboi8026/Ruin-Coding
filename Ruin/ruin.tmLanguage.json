@@ -1,0 +1,113 @@
+{
+  "scopeName": "source.ruin",
+  "patterns": [
+    { "include": "#commands" },
+    { "include": "#properties" },
+    { "include": "#numbers" },
+    { "include": "#operators" },
+    { "include": "#comments" },
+    { "include": "#strings" },
+    { "include": "#punctuation" },
+    { "include": "#customcall" }
+  ],
+  "repository": {
+    "commands": {
+      "patterns": [
+        {
+      "name": "entity.name.function",
+      "match": "(?i)\\b(Val|Vec|Text|Control|Goto|Custom|Crash|Ruin)\\b(?=\\s*\\()"
+        }       
+      ]
+    },
+    "properties": {
+      "patterns": [
+        {
+          "name": "variable.parameter.ruin",
+          "match": "(?:[\\.,])\\s*(?i)(Type|Value|Input|Output|If|Else|Until|At|Has|Action|Name)\\b"
+        },
+        {
+          "name": "variable.other.property.ruin",
+          "match": "(?:[\\.,])\\s*[A-Za-z_][A-Za-z0-9_]*\\b"
+        }
+      ]
+    },
+    "numbers": {
+  "patterns": [
+    {
+      "name": "constant.numeric",
+      "match": "\\b\\d+(\\.\\d+)?\\b"
+    },
+       {
+      "name": "constant.language",
+      "match": "\\b(e|Tau|Pi|i|Inf|NaN)\\b"
+        }
+      ]
+    },
+    "operators": {
+      "patterns": [
+        {
+          "name": "keyword.operator.ruin",
+          "match": "(?:==|!=|<=|>=|->|[+\\-*/=<>^\\\\%])"
+        }
+      ]
+    },
+    "strings": {
+      "patterns": [
+        {
+          "name": "string.quoted.double.ruin",
+          "begin": "\"",
+          "end": "\"",
+          "patterns": [
+            { "name": "constant.character.escape.ruin", "match": "\\\\." }
+          ]
+        },
+        {
+          "name": "string.quoted.single.ruin",
+          "begin": "'",
+          "end": "'",
+          "patterns": [
+            { "name": "constant.character.escape.ruin", "match": "\\\\." }
+          ]
+        }
+      ]
+    },
+    "punctuation": {
+      "patterns": [
+        { "name": "punctuation.access.property.ruin", "match": "\\." },
+        { "name": "punctuation.separator.list.ruin", "match": "," },
+        { "name": "punctuation.separator.keyvalue.ruin", "match": ":" },
+        { "name": "punctuation.terminator.command.ruin", "match": "#" },
+        { "name": "punctuation.terminator.semicolon.ruin", "match": ";" },
+        { "name": "punctuation.operator.slash.ruin", "match": "//" },
+        { "name": "punctuation.parenthesis.ruin", "match": "[()]" }
+      ]
+    },
+    "customcall": {
+      "patterns": [
+    {
+      "name": "punctuation.definition.customcall.ruin",
+      "match": "'"
+    },
+    {
+      "match": "'([A-Za-z_][A-Za-z0-9_]*)\\s*(?=\\()",
+      "captures": {
+        "1": { "name": "entity.name.function" }
+          }
+        }
+      ]
+    },
+    "comments": {
+      "patterns": [
+        {
+          "name": "comment.block.ruin",
+          "begin": "/\"",
+          "end": "\"/"
+        },
+        {
+          "name": "comment.line.double-slash.ruin",
+          "match": "//.*$"
+        }
+      ]
+    }
+  }
+}
