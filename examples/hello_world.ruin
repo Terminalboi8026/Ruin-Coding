@@ -1,0 +1,4 @@
+// Example: Hello World in Ruin
+// This is the traditional first program
+
+print("Hello, World!");
